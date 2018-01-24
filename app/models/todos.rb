@@ -12,6 +12,14 @@ class Todos
     Todos.all[id.to_s]
   end
 
+  def self.where(*args)
+  	todos =  Todos.all
+  	args[0].stringify_keys.each do |k,v|
+      todos = todos.select{|key, hash| hash[k] == v }
+    end
+    todos
+  end
+
   def self.all
   	self.initial()
     @firebase.get("todos", {'name' => 'zzz'}).body
