@@ -44,11 +44,11 @@ class Todos
   end
 
   def self.first
-    Todos.all.to_a[0] || []
+    Todos.all&.to_a[0] || []
   end
 
   def self.last
-    Todos.all.to_a[-1] || []
+    Todos.all&.to_a[-1] || []
   end
 
   def self.ids
