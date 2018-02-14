@@ -22,7 +22,7 @@ class Todos
 
   def self.all
   	self.initial()
-    @firebase.get("todos", {'name' => 'zzz'}).body
+    @firebase.get("todos").body
   end
 
   def self.create(data)

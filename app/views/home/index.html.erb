@@ -70,5 +70,10 @@
     };
     firebase.initializeApp(config);
   </script>
+  <a href="/auth/facebook/" class="btn btn-block btn-social c-btn-square c-btn-uppercase btn-md btn-facebook">
+                                        <i class="fa fa-facebook"></i> GOOGLE+帳號串連 </a>
+  <% if @auth.present? %>
+    <%= @auth.to_json %>
+  <% end %>
 </body>
 </html>
