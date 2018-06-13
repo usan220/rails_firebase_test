@@ -69,6 +69,13 @@
       messagingSenderId: "179349701342"
     };
     firebase.initializeApp(config);
+    firebase.auth().createUserWithEmailAndPassword("mapleprince_2@hotmail.com", "zxcv123456").catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log("ok");
+      // ...
+    });
   </script>
   <a href="/auth/facebook/" class="btn btn-block btn-social c-btn-square c-btn-uppercase btn-md btn-facebook">
                                         <i class="fa fa-facebook"></i> GOOGLE+帳號串連 </a>
